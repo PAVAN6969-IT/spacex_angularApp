@@ -1,0 +1,26 @@
+.bgcolorCls {margin: 0px;margin-left: 10px;}
+.fliterArea {background-color: white;border-radius: 5px; height: max-content; padding-bottom: 10px;}
+.filterTitle{text-decoration: underline; text-align: center;margin-bottom: 0px;}
+.yearClas a{background-color: rgb(159, 201, 159); padding: 5px; width: 40%; text-align: center;
+    float: left; margin: 5px; border-radius: 8px;cursor: pointer;}
+.yearClas a{text-decoration:none;}
+.yearClas a:hover{background-color:rgb(89, 206, 89);text-decoration:none;}
+.yearClas a:focus{background-color:rgb(89, 206, 89)}
+
+.topCls { margin-top: 5px; contain: content;}
+.bottomCls{margin-bottom: 10px;margin-top: 20px !important; contain: content;}
+
+.fliterArea .footer .bolderClasPlus {font-weight: bold; margin-bottom: 0px;}
+
+.contentBlock{height: 460px;margin-bottom: 10px;background-color: white;border-radius: 5px;padding: 10px;float: left;margin-left: 10px;}
+.contentBlock img {width: 100%;}
+.contentBlock p.paraheading{color: #6b6ec1;font-weight: bold;}
+.contentBlock span.bolderClas{font-weight: bold;}
+
+@media(min-width: 992px){
+    .contentBlock{ width: 24% !important;}
+}
+
+@media(max-width: 575px){
+    .contentBlock{ margin-left: 0px !important; margin-top: 10px !important; height: 515px;}
+}

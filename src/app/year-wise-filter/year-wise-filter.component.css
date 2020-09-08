@@ -1,0 +1,12 @@
+.contentBlock{height: 460px;margin-bottom: 10px;background-color: white;border-radius: 5px;padding: 10px;float: left;margin-left: 10px;}
+.contentBlock img {width: 100%;}
+.contentBlock p.paraheading{color: #6b6ec1;font-weight: bold;}
+.contentBlock span.bolderClas{font-weight: bold;}
+
+@media(min-width: 992px){
+    .contentBlock{ width: 24% !important;}
+}
+
+@media(max-width: 575px){
+    .contentBlock{ margin-left: 0px !important; margin-top: 10px !important; height: 515px;}
+}

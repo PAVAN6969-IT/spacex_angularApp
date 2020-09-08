@@ -1,0 +1,51 @@
+<h2>{{ title }}</h2>
+<div class="row bgcolorCls">
+  <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6 fliterArea">    
+    <h5>Fliters</h5>
+    <div class="topCls">
+      <p class="filterTitle">Launch Year</p>
+      <ngtemplate *ngFor="let year of launchyears">
+        <div class="yearClas">
+          <a (click)="seleectedYear(year)" routerLink="landing/:year">{{year}}</a>
+        </div>
+      </ngtemplate>
+    </div>
+    <div class="bottomCls">
+      <p class="filterTitle">Successfull Launch</p>
+      <div class="yearClas">
+        <a (click)="filterLaunchSuccessData('true')" routerLink="landing/successfullLaunch:true">True</a>
+      </div>
+      <div class="yearClas">
+        <a (click)="filterLaunchSuccessData('false')" routerLink="landing/successfullLaunch:false">False</a>
+      </div>
+    
+      <p class="filterTitle">Successfull Landing</p>
+      <div class="yearClas">
+        <a (click)="filterLandSuccessData('true')" routerLink="landing/successfullLand:true">True</a>
+      </div>
+      <div class="yearClas">
+        <a (click)="filterLandSuccessData('false')" routerLink="landing/successfullLand:false">False</a>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p class="bolderClasPlus">Developed By:</p>
+      <p>{{developerName}}</p>
+    </div>
+  </div>
+  <div class="col-lg-10 col-md-8 col-sm-6 col-xs-6 contentArea">
+    <app-year-wise-filter>
+      <div class="contentBlock col-lg-4 col-md-4 col-sm-12 col-xs-12" *ngFor="let launch of launchData">
+        <img class="img-responsive" src= {{launch.links.mission_patch}} alt="mission_patch_image">
+        <p class="paraheading">{{launch.mission_name}} #{{launch.flight_number}} </p>
+        <span class="bolderClas">Mission Ids:</span>
+        <ul *ngFor="let ids of launch.mission_id">
+          <li>{{ids}}</li>
+        </ul>
+        <p><span class="bolderClas">Launch Year:</span> {{launch.launch_year}}</p>
+        <p><span class="bolderClas">Successfull Launch:</span> {{launch.launch_success}}</p>
+        <p><span class="bolderClas">Successfull Land:</span> {{launch.rocket.first_stage.cores[0].land_success}}</p>
+      </div>
+    </app-year-wise-filter>
+  </div>
+  </div>
